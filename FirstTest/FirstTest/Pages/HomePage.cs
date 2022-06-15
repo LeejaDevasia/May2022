@@ -20,5 +20,17 @@ namespace FirstTest.Pages
             timeAndMaterial.Click();
 
         }
+
+        public void GoToEmployeePage(IWebDriver driver)
+        {
+            // open administration tab  
+            IWebElement administration = driver.FindElement(By.XPath("/html/body/div[3]/div/div/ul/li[5]/a"));
+            administration.Click();
+            //navigate to time and material
+
+            IWebElement employee = driver.FindElement(By.XPath("/html/body/div[3]/div/div/ul/li[5]/ul/li[2]/a"));
+            employee.Click();
+
+        }
     }
 }
